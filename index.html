@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="unsafe-url">
+    <style rel="stylesheet">
+    body{
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      #overflow: hidden;
+    }
+    #player{
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .jwplayer{
+      position: static !important;
+    }
+    .jwplayer .jw-preview{
+      background-size: cover !important;
+    }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script src="https://cdn.jwplayer.com/libraries/lqsWlr4Z.js"></script>
+<div id="player"></div>
+<script>
+  jwplayer("player").setup({
+            "playlist": 'https://cdn.jwplayer.com/v2/media/i3q4gcBi',
+            "playbackRateControls": true,
+            "autostart":true,
+            "playbackRates": [0.25, 0.5, 1, 1.5, 2],
+            "aspectratio":"16:9",
+            "width":"100%",
+            "height":"100%",
+            "advertising":{
+            "client":"vast",
+            "admessage":"Quảng cáo còn XX giây.",
+            "skiptext":"Bỏ qua quảng cáo",
+            "skipmessage":"Bỏ qua sau xxs",
+            "skipoffset":5,
+            "schedule":{
+                'myAds':{
+                  offset:'preload',
+                  tag: 'vast.xml' ,
+                    }
+            }
+        }
+
+        });
+</script>
+</body>
+</html>
